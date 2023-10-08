@@ -1,25 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="index.php" method="get">
+        <label>username:</label><br>
+        <input type="text" name="username"><br>
+        <label>password:</label><br>
+        <input type="password" name="password"><br>
+        <input type="submit" value="Log in" >
+    </form>
+</body>
+</html>
+
 <?php 
-  //Variable = a reusable container that holds data string, integer, float, boolean
-
-  $name = "Hector";
-  $food = "pizza";
-  $email = "paquito503@yahoo.com";
-
-  $age = 21;
-  $users = 2;
-  $quantity = 4;
-
-  $gpa = 2.5;
-  $price = 5.99;
-  $tax_rate = 5.1;
-
-  $employed = true;
-  $online = false;
-  $for_sale = true;
-
-  $total = null;
-
-  echo"You have order {$quantity} x {$food}s <br>";
-  $total = $quantity * $price;
-  echo"Your total is: \${$total}";
+    echo $GET["username"];
 ?>
