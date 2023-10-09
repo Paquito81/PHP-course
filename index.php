@@ -7,15 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-   <form action="index.php" method="post">
-       <label>x:</label>
-       <input type="text" name="x"><br>
-       <label>y:</label>
-       <input type="text" name="y"><br>
-       <label>z:</label>
-       <input type="text" name="z"><br>
-       <input type="submit" value="total">
-   </form>        
+   <form action="index.php" method="get">
+       <label>Username: </label>
+       <input type="text" name="username"><br>
+       <label>password: </label>
+       <input type="password" name="password"><br>
+       <input type="submit" value="Log in"><br>
+</form>   
+
 
 <!-- <form action="index.php" method="post">
        <label>quantity: </label><br>
@@ -27,10 +26,14 @@
 
 <?php 
 
-    $x = $_POST["x"];
-    $y = $_POST["y"];
-    $z = $_POST["z"];
-    $total = null;
+    echo "{$_GET["username"]}<br>";
+    echo "{$_GET["password"]}";
+    
+
+    // $x = $_POST["x"];
+    // $y = $_POST["y"];
+    // $z = $_POST["z"];
+    // $total = null;
 
     // $total = abs($x); is the absolute value
     // $total = round($x); is rounded to nearest whole
@@ -38,7 +41,7 @@
     // $total = sqrt($x); is the square root of a number.
     // $total = max($x, $y, $z); highest number enter.
 
-    echo $total;
+    // echo $total;
     // $item = "pizza";
     // $price = 5.99;
     // $quantity = $_POST["quantity"];
