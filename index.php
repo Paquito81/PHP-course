@@ -7,27 +7,49 @@
     <title>Document</title>
 </head>
 <body>
-   <form action="index.php" method="get">
-       <label>Username: </label>
-       <input type="text" name="username"><br>
-       <label>password: </label>
-       <input type="password" name="password"><br>
-       <input type="submit" value="Log in"><br>
-</form>   
+    <form action="index.php" method="post">
+        <label>radius:</label><br>
+        <input type="text" name="radius">
+        <input  type="submit" value="calculate">
 
 
-<!-- <form action="index.php" method="post">
-       <label>quantity: </label><br>
-       <input type="text" name="quantity"><br>
-       <input type="submit" value="total">
+
+    <!-- <form action="index.php" method="post">
+        <label>username: </label>
+        <input type="text" name="username"><br>
+        <label>password: </label>
+        <input type="password" name="password"><br>
+        <input type="submit" value="log in"><br>
+
     </form> -->
+
+
+
 </body>
 </html>
 
 <?php 
 
-    echo "{$_GET["username"]}<br>";
-    echo "{$_GET["password"]}";
+    $radius = $_POST["radius"];
+    $circumference = null;
+    $area = null;
+    $volume = null;
+
+    $circumference = 2 * pi() * $radius;
+    $circumference = round($circumference, 2);
+    
+    $area = pi() * pow($radius, 2);
+    $area = round($area, 2);
+
+    $volume = 4/3 * pi() * pow($radius, 3);
+    $volume = round($volume, 2);
+
+    echo"Circumference = {$circumference}cm <br>";
+    echo "Area = {$area}cm^2 <br>";
+    echo "volume = {$volume}cm^3 <br>";
+
+    // echo "{$_GET["username"]}<br>";
+    // echo "{$_GET["password"]}";
     
 
     // $x = $_POST["x"];
@@ -40,7 +62,10 @@
     // $total = pow($x, $y); total is x to the power of y
     // $total = sqrt($x); is the square root of a number.
     // $total = max($x, $y, $z); highest number enter.
-
+    // $total = min($x, $y, $z); lowest number enter.
+    // $total = pi();
+    // $total = rand()
+    
     // echo $total;
     // $item = "pizza";
     // $price = 5.99;
