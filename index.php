@@ -7,10 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+
+
+    <!-- <form action="index.php" method="post">
         <label>radius:</label><br>
         <input type="text" name="radius">
-        <input  type="submit" value="calculate">
+        <input  type="submit" value="calculate"><br>
+    </form> -->
 
 
 
@@ -30,23 +33,40 @@
 
 <?php 
 
-    $radius = $_POST["radius"];
-    $circumference = null;
-    $area = null;
-    $volume = null;
+$age = 8;
 
-    $circumference = 2 * pi() * $radius;
-    $circumference = round($circumference, 2);
+    if($age >= 100){
+        echo"You are too old for this site";
+    }
+
+    elseif($age >= 18){
+        echo "You may enter this site";
+    }
+
+    elseif($age <=0){ 
+        echo"Tou must enter a valid age";
+    }
+    else{
+        echo"You must be 18+ to enter this site";
+    }
+
+    // $radius = $_POST["radius"];
+    // $circumference = null;
+    // $area = null;
+    // $volume = null;
+
+    // $circumference = 2 * pi() * $radius;
+    // $circumference = round($circumference, 2);
     
-    $area = pi() * pow($radius, 2);
-    $area = round($area, 2);
+    // $area = pi() * pow($radius, 2);
+    // $area = round($area, 2);
 
-    $volume = 4/3 * pi() * pow($radius, 3);
-    $volume = round($volume, 2);
+    // $volume = 4/3 * pi() * pow($radius, 3);
+    // $volume = round($volume, 2);
 
-    echo"Circumference = {$circumference}cm <br>";
-    echo "Area = {$area}cm^2 <br>";
-    echo "volume = {$volume}cm^3 <br>";
+    // echo"Circumference = {$circumference}cm <br>";
+    // echo "Area = {$area}cm^2 <br>";
+    // echo "volume = {$volume}cm^3 <br>";
 
     // echo "{$_GET["username"]}<br>";
     // echo "{$_GET["password"]}";
