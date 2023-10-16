@@ -32,23 +32,29 @@
 </html>
 
 <?php 
+    $adult = true;
 
-$age = 8;
-
-    if($age >= 100){
-        echo"You are too old for this site";
-    }
-
-    elseif($age >= 18){
+    if($adult){
         echo "You may enter this site";
     }
-
-    elseif($age <=0){ 
-        echo"Tou must enter a valid age";
-    }
     else{
-        echo"You must be 18+ to enter this site";
+        echo"You must be an adult to enter";
     }
+    // $age = 10;
+    
+    // if($age >= 100){
+    //     echo"You are way to old to enter";
+    // }
+    // elseif($age >= 18){
+    //     echo"You may enter";
+    // }
+    // elseif($age <= 0){
+    //     echo"Please enter a valid number";
+    // }
+    // else{
+    //     echo"You must be 18+ to enter";
+    // }
+   
 
     // $radius = $_POST["radius"];
     // $circumference = null;
